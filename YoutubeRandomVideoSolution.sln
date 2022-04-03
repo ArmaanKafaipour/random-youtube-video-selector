@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeRandomVideoSelectorUI", "YoutubeRandomVideoSelectorUI\YoutubeRandomVideoSelectorUI.csproj", "{E402FC34-E9FB-40A9-B30B-D0FF35E9A09C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeRandomVideoLibrary", "YoutubeRandomVideoLibrary\YoutubeRandomVideoLibrary.csproj", "{FE72638E-F04A-44EA-90F8-D447BE2714B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1E31A700-C8A8-4777-B6EC-7EA3EBD8BAFC}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E402FC34-E9FB-40A9-B30B-D0FF35E9A09C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E402FC34-E9FB-40A9-B30B-D0FF35E9A09C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E402FC34-E9FB-40A9-B30B-D0FF35E9A09C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E402FC34-E9FB-40A9-B30B-D0FF35E9A09C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE72638E-F04A-44EA-90F8-D447BE2714B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE72638E-F04A-44EA-90F8-D447BE2714B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE72638E-F04A-44EA-90F8-D447BE2714B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE72638E-F04A-44EA-90F8-D447BE2714B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6012E29E-0FEE-4199-93D4-7EC7FF4CD198}
+	EndGlobalSection
+EndGlobal

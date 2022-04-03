@@ -1,0 +1,69 @@
+﻿@page "/"
+@using Google.Apis.Auth.OAuth2
+@using Google.Apis.YouTube.v3
+@using YoutubeRandomVideoLibrary
+
+@inject YoutubeRandomVideoLibrary.Helper Helper
+
+<div class="text-center">
+
+    <PageTitle>Random Video Selector</PageTitle>
+
+
+    @if (showAuthorizeComponent)
+    {
+        <div>
+            <button class="btn btn-primary btn-lg" @onclick="@RunAuthorize">Authorize</button>
+        </div>
+    }
+
+    @if (showRandomButtonComponent)
+    {
+        <div>
+            <button class="btn btn-outline-success btn-lg" @onclick="@GetRandom">Get a random video!</button>
+        </div>
+    }
+
+    @if (showVideoComponent)
+    {
+        <div class="mx-auto">
+            <iframe width="560" height="315" src=@url title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    }
+</div>
+
+@code {
+
+    private bool showVideoComponent { get; set; }
+    private bool showAuthorizeComponent = true;
+    private bool showRandomButtonComponent { get; set; }
+
+    private YouTubeService? youtubeService { get; set; }
+
+
+    private string? randomVid;
+    private string? url;
+
+    public async Task RunAuthorize()
+    {
+        youtubeService = await Helper.InitService();
+        await Helper.AuthorizeAsync(youtubeService);
+        UpdateButtons();
+    }
+
+    public void UpdateButtons()
+    {
+        showVideoComponent = true;
+        showAuthorizeComponent = false;
+        showRandomButtonComponent = true;
+    }
+
+    public async Task GetRandom()
+    {
+        randomVid = await Helper.GetRandomVideo(youtubeService);
+        url = "https://youtube.com/embed/" + randomVid;
+        showVideoComponent = true;
+    }
+
+}
+
